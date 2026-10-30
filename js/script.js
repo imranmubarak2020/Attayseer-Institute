@@ -71,6 +71,8 @@ if (admissionForm && formNotice) {
                 "A connection error occurred. Please check your internet " +
                 "connection and try again.";
         } finally {
+            isSubmitting = false;
+
             if (submitButton) {
                 submitButton.disabled = false;
                 submitButton.textContent = originalButtonText;
