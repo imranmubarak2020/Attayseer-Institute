@@ -21,11 +21,3 @@ if (menuToggle && mainNavigation) {
         });
     });
 }
-
-
-
-const practiceButton = document.querySelector("#practice-button");
-
-practiceButton.addEventListener("click", function () {
-    alert("You clicked the button!");
-});
