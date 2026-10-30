@@ -27,9 +27,17 @@ if (menuToggle && mainNavigation) {
 const admissionForm = document.querySelector("#admission-form");
 const formNotice = document.querySelector("#form-notice");
 
+let isSubmitting = false;
+
 if (admissionForm && formNotice) {
     admissionForm.addEventListener("submit", async function (event) {
         event.preventDefault();
+
+        if (isSubmitting) {
+    return;
+}
+
+isSubmitting = true;
 
         const submitButton = admissionForm.querySelector(
             'button[type="submit"], input[type="submit"]'
